@@ -1,0 +1,38 @@
+.navbar{
+    display: flex;
+    justify-content:space-between;
+}
+
+.talking{
+    display: flex;
+    justify-content: space-around;
+}
+.tab{
+    display: flex;
+    justify-content: space-between;
+}
+input[type=text] {
+    /* width: 130px; */
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    border-radius:20px;
+    font-size: 16px;
+    background-color:white;
+    background-image: url('/assets/54481.svg');
+    background-size:32px ;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+    border-radius:2%;
+    
+  }
+  b{
+      color: black;
+      font-size: 16px;
+      margin-left: 15px;;
+  }

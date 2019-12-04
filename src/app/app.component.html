@@ -1,0 +1,88 @@
+
+
+<div class="container-fluid">
+  <mat-toolbar style="background-color: black;" class="navbar">
+  <mat-icon style="color:white;font-size: 25px;">arrow_back</mat-icon>
+  
+    <mat-icon style="color: white;font-size: 30px;">contact_support</mat-icon>
+
+  </mat-toolbar>
+
+<!-- <div class="form-group">
+  <label></label>
+  <input type="text" class="form-control" name="sea">
+</div> -->
+  <br>
+
+<form>
+    <input type="text" name="search" [(ngModel)]="searchText" placeholder="search item..">
+    
+  </form>
+  <b>you may also search for:</b><br>
+  <small>Note:-  1.type<b>#sandals</b> for sandals details,
+                <b>#shoes</b> for shoes details   && <b>#sandals #shoes</b> for both deatils</small>
+ 
+  <ul *ngFor="let san of sandals | products:searchText">
+      <button mat-raised-button color="primary"> #{{ san }}</button>
+   
+  </ul>
+  <ul *ngFor="let san of shoes | products1:searchText">
+      <button mat-raised-button color="primary"> #{{ san }}</button>
+   
+  </ul>
+  <ul *ngFor="let san of all | products2:searchText">
+      <button mat-raised-button color="primary"> #{{ san }}</button>
+   
+  </ul>
+    <!-- <div class="col-md-10">
+      <ng-multiselect-dropdown
+      name="city"
+      [placeholder]="'select city'"
+      [data]="cities"
+      formControlName="city"
+      [disabled]="disabled"
+      [settings]="dropdownSettings"
+      (onSelect)="oneitemSelect($event)"></ng-multiselect-dropdown>
+    </div> -->
+
+<br><br><br>
+    <div class="talking">
+              <small>
+          
+             <p><b>200k</b></p>
+             Number of people talking
+             about #fashion,#shoes
+          
+
+
+              </small>
+              
+
+   
+    <small>
+      
+       <p> <b>20k</b></p>
+          Numberof Kofluence 
+          Influencer talking
+          about #fashion,#shoes
+    
+
+
+           </small>
+           </div>
+
+
+</div>
+  
+        <div class="posts">
+          
+            <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" class="tab">
+                <mat-tab label="Top Posts" ></mat-tab>
+                <mat-tab label="Latests Posts" ></mat-tab>
+                
+              </mat-tab-group>
+            
+        </div>
+
+
+<router-outlet></router-outlet>
